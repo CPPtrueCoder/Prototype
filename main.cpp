@@ -5,6 +5,7 @@ using namespace std;
 
 class Warrior {
 public :
+  Warrior () = default;
     virtual  unique_ptr <Warrior> clone() = 0;
     virtual void info() = 0;
     virtual ~Warrior()=default;
@@ -20,6 +21,7 @@ public :
         cout<<"Infantryman"<<endl;
 
     }
+   virtual  ~InfantryMan() override =default;
 private:
     InfantryMan()=default;
 };
@@ -32,6 +34,7 @@ public:
     void info() override {
         cout<< " Archer"<<endl;
     }
+    virtual ~Archer () override = default;
 private:
     Archer () = default;
 };
@@ -47,6 +50,7 @@ public:
     void info() override {
     cout<<" Horseman"<<endl;
     }
+      virtual ~HorseMan () override = default;
 private:
     HorseMan()=default;
 };
